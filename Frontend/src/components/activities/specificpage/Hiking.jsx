@@ -4,10 +4,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { FaWalking } from "react-icons/fa";
 import { GiMountainCave } from "react-icons/gi";
-import moment from "moment";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function Hiking() {
-  // const [price, setPrice] = useState("");
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [tent, setTent] = useState(0);
   return (
     <Section id="sectionContainer">
       <Carousel infiniteLoop autoPlay>
@@ -69,20 +71,12 @@ export default function Hiking() {
             5.Dinner and overnight in the riverside camp with attached washroom.
             <br></br>
             <br></br> <br></br>
-            Day 2 - Rafting, Paragliding and Return<br></br>
-            <br></br>
-            1.After breakfast this morning, you will be reaching at the starting
-            point of your rafting this morning in Kullu.<br></br>
-            2.After safety instructions and gear check, you will begin your
-            rafting expedition on the river which is 7 km long and takes about
-            35 to 45 minutes to complete.<br></br>
-            3.Next, go to the site where paragliding begins to start another
-            adventure (can be arranged at an additional cost).<br></br>
-            4.Fly high above the valley and observe the Beas river and Kullu
-            Valley at their scenic best.<br></br>
-            5.Reach Manali Camps and pack up your bags.<br></br>
-            6.You will be checking out of the camps to bring the experience to
-            an end.<br></br>
+            Day 2 - Paragliding and checkout from campsite<br></br> <br></br>1.
+            Post Breakfast , The Group will head to paragliding takeoff point{" "}
+            <br></br>2. The flight lasts 20 minutes with experienced glider
+            <br></br> 3. The pilot will take care of controlling the flight
+            while you enjoy the mesmerizing views <br></br>4. You will then come
+            back to camp to end the tour here
           </p>
         </div>
         <div>
@@ -118,10 +112,60 @@ export default function Hiking() {
       {/* Booking */}
 
       <div className="container">
+        <br></br>
         <h1>Select Camping Dates</h1>
-        <h4>Check In {moment(new Date()).format("MMMM Do YYYY")} </h4>
+        <br></br>
+        <div className="date">
+          <h4 className="checkIn">Check In </h4>
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            showTimeSelect
+            minDate={new Date()}
+            dateFormat="Pp"
+            placeholderText="Select Date"
+          />
+          <br></br>
+          <br></br>
+        </div>
+        <table className="table">
+          <tr className="heading">
+            <th>Type</th>
+            <th>Price per camper(s)</th>
+            <th>Quantity</th>
+            <th>No of People</th>
+            <th>Total Price</th>
+          </tr>
 
-        <h4>Check Out {moment(new Date()).format("MMMM Do YYYY")}</h4>
+          <tr>
+            <td>Tent</td>
+            <td>2500/2</td>
+            <td>
+              <h4 className="type">{tent}</h4>
+              <div className="btnContainer">
+                <button
+                  className="btn"
+                  onClick={() => setTent(tent - (tent > 0 ? 1 : 0))}
+                >
+                  -
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => setTent(tent + (tent < 10 ? 1 : 0))}
+                >
+                  +
+                </button>
+              </div>
+            </td>
+            <td> {tent * 2}</td>
+            <td> {tent * 2500}</td>
+          </tr>
+        </table>
+        <br></br>
+
+        <button className="booking">Book Camp</button>
+        <br></br>
+        <br></br>
       </div>
       {/* Booking End */}
     </Section>
@@ -206,9 +250,74 @@ const Section = styled.section`
     }
   }
 
-  .container {
-    // Booking styling
+
+  //Bookings start
+  .container{
+   font-family: 'Lato', sans-serif;
+   line-height:1.5rem;
+    text-align:center;
+   float:center;
+   background-color: #e6ffff;
+   border-radius: 1rem;
+   transition: 0.3s ease-in-out;
+   &:hover {
+     transform: translateX(0.4rem) translateY(-1rem);
+     box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 15px;
+     
+   }
+ 
   }
+    .table {
+      padding:15px 15px;
+      margin:auto;
+      table-layout:fixed;
+  }
+ 
+  .heading {
+    background-color:#ffff66;
+    border:none;
+    border-radius:15px;
+   
+   }
+   td, th {
+     border: 1px solid #dddddd;
+     text-align: center;
+     padding: 8px;
+     border:none;
+   }
+ 
+   .btn{
+     margin:3px;
+     padding:5px;
+   }
+  
+   //date start
+
+   input {
+     padding:4px;
+     margin-top:13px;
+   }
+ 
+   .react-datepicker-wrapper {
+    width:35%;
+   }
+   //date end
+   
+   .booking {
+       padding: 10px 15px;
+       font-size: 14px;
+       cursor: pointer;
+       text-align: center;
+       text-decoration: none;
+       outline: none;
+       color: #fff;
+       background-color: #4caf50;
+       border: none;
+       border-radius: 15px;
+       box-shadow: 0 9px #99;
+       
+   }
+   //Bookings End
 
 
   //Responsive

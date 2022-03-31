@@ -3,30 +3,34 @@ import styled from "styled-components";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { FaHotel } from "react-icons/fa";
-
-import moment from "moment";
+import { GiCampingTent } from "react-icons/gi";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function MountainBiking() {
-  // const [price, setPrice] = useState("");
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [hotel, setHotel] = useState(0);
+  const [tent, setTent] = useState(0);
+
   return (
     <Section id="sectionContainer">
       <Carousel infiniteLoop autoPlay>
+        <div className="image">
+          <img
+            src="https://images.unsplash.com/photo-1624879844389-28236d904da4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="biking"
+          />
+        </div>
         <div className="image">
           <img
             src="https://images.unsplash.com/photo-1548360046-aedb7ed40838?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             alt="biking"
           />
         </div>
-        <div className="image">
-          <img
-            src="https://images.unsplash.com/photo-1518215676614-b999b8bf7432?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1430&q=80"
-            alt="biking"
-          />
-        </div>
 
         <div className="image">
           <img
-            src="https://images.unsplash.com/photo-1559680343-d8ac0cec3859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
+            src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             alt="biking"
           />
         </div>
@@ -103,7 +107,7 @@ export default function MountainBiking() {
           <div className="content">
             <h1 className="title">Accommodation</h1>
             <p className="para">
-              Hotel <FaHotel />
+              Hotel <FaHotel /> , Tent <GiCampingTent />
             </p>
           </div>
         </div>
@@ -114,10 +118,82 @@ export default function MountainBiking() {
       {/* Booking */}
 
       <div className="container">
+        <br></br>
         <h1>Select Camping Dates</h1>
-        <h4>Check In {moment(new Date()).format("MMMM Do YYYY")} </h4>
+        <br></br>
+        <div className="date">
+          <h4 className="checkIn">Check In </h4>
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            showTimeSelect
+            minDate={new Date()}
+            dateFormat="Pp"
+            placeholderText="Select Date"
+          />
+          <br></br>
+          <br></br>
+        </div>
+        <table className="table">
+          <tr className="heading">
+            <th>Type</th>
+            <th>Price per camper(s)</th>
+            <th>Quantity</th>
+            <th>No of People</th>
+            <th>Total Price</th>
+          </tr>
+          <tr>
+            <td>Hotel</td>
+            <td>3500/3</td>
+            <td>
+              <h4 className="type">{hotel}</h4>
+              <div className="btnContainer">
+                <button
+                  className="btn"
+                  onClick={() => setHotel(hotel - (hotel > 0 ? 1 : 0))}
+                >
+                  -
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => setHotel(hotel + (hotel < 10 ? 1 : 0))}
+                >
+                  +
+                </button>
+              </div>
+            </td>
+            <td> {hotel * 3}</td>
+            <td> {hotel * 3500}</td>
+          </tr>
+          <tr>
+            <td>Tent</td>
+            <td>2500/2</td>
+            <td>
+              <h4 className="type">{tent}</h4>
+              <div className="btnContainer">
+                <button
+                  className="btn"
+                  onClick={() => setTent(tent - (tent > 0 ? 1 : 0))}
+                >
+                  -
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => setTent(tent + (tent < 10 ? 1 : 0))}
+                >
+                  +
+                </button>
+              </div>
+            </td>
+            <td> {tent * 2}</td>
+            <td> {tent * 2500}</td>
+          </tr>
+        </table>
+        <br></br>
 
-        <h4>Check Out {moment(new Date()).format("MMMM Do YYYY")}</h4>
+        <button className="booking">Book Camp</button>
+        <br></br>
+        <br></br>
       </div>
       {/* Booking End */}
     </Section>
@@ -201,10 +277,73 @@ const Section = styled.section`
     }
   }
 
-  .container {
-    // Booking styling
-    text-align:center;
+  //Bookings start
+ .container{
+  font-family: 'Lato', sans-serif;
+  line-height:1.5rem;
+   text-align:center;
+  float:center;
+  background-color: #e6ffff;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    transform: translateX(0.4rem) translateY(-1rem);
+    box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 15px;
+    
   }
+
+ }
+   .table {
+     padding:15px 15px;
+     margin:auto;
+     table-layout:fixed;
+ }
+
+ .heading {
+   background-color:#ffff66;
+   border:none;
+   border-radius:15px;
+  
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    border:none;
+  }
+
+  .btn{
+    margin:3px;
+    padding:5px; 
+  }
+
+  //date start
+
+  input {
+    padding:4px;
+    margin-top:13px;
+  }
+
+  .react-datepicker-wrapper {
+   width:35%;
+  }
+  //date end
+  
+  .booking {
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #99;
+      
+  }
+  //Bookings End
 
   //Responsive
   @media all and (max-width: 1024px) {

@@ -4,14 +4,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { FaShower } from "react-icons/fa";
 import { FaToilet } from "react-icons/fa";
-import { GiCampingTent } from "react-icons/gi";
 import { FaWineGlassAlt } from "react-icons/fa";
 import { AiOutlineAreaChart } from "react-icons/ai";
-
-import moment from "moment";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function CliffJumping() {
-  // const [price, setPrice] = useState("");
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [tent, setTent] = useState(0);
   return (
     <Section id="sectionContainer">
       <Carousel infiniteLoop autoPlay>
@@ -79,10 +79,60 @@ export default function CliffJumping() {
       {/* Booking */}
 
       <div className="container">
+        <br></br>
         <h1>Select Camping Dates</h1>
-        <h4>Check In {moment(new Date()).format("MMMM Do YYYY")} </h4>
+        <br></br>
+        <div className="date">
+          <h4 className="checkIn">Check In </h4>
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            showTimeSelect
+            minDate={new Date()}
+            dateFormat="Pp"
+            placeholderText="Select Date"
+          />
+          <br></br>
+          <br></br>
+        </div>
+        <table className="table">
+          <tr className="heading">
+            <th>Type</th>
+            <th>Price per camper(s)</th>
+            <th>Quantity</th>
+            <th>No of People</th>
+            <th>Total Price</th>
+          </tr>
 
-        <h4>Check Out {moment(new Date()).format("MMMM Do YYYY")}</h4>
+          <tr>
+            <td>Tent</td>
+            <td>2500/2</td>
+            <td>
+              <h4 className="type">{tent}</h4>
+              <div className="btnContainer">
+                <button
+                  className="btn"
+                  onClick={() => setTent(tent - (tent > 0 ? 1 : 0))}
+                >
+                  -
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => setTent(tent + (tent < 10 ? 1 : 0))}
+                >
+                  +
+                </button>
+              </div>
+            </td>
+            <td> {tent * 2}</td>
+            <td> {tent * 2500}</td>
+          </tr>
+        </table>
+        <br></br>
+
+        <button className="booking">Book Camp</button>
+        <br></br>
+        <br></br>
       </div>
       {/* Booking End */}
     </Section>
@@ -167,10 +217,75 @@ const Section = styled.section`
     }
   }
 
-  .container {
-    // Booking styling
+
+  //Bookings start
+  .container{
+   font-family: 'Lato', sans-serif;
+   line-height:1.5rem;
     text-align:center;
+   float:center;
+   background-color: #e6ffff;
+   border-radius: 1rem;
+   transition: 0.3s ease-in-out;
+   &:hover {
+     transform: translateX(0.4rem) translateY(-1rem);
+     box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 15px;
+     
+   }
+ 
   }
+    .table {
+      padding:15px 15px;
+      margin:auto;
+      table-layout:fixed;
+  }
+ 
+  .heading {
+    background-color:#ffff66;
+    border:none;
+    border-radius:15px;
+   
+   }
+   td, th {
+     border: 1px solid #dddddd;
+     text-align: center;
+     padding: 8px;
+     border:none;
+   }
+ 
+   .btn{
+     margin:3px;
+     padding:5px;
+   }
+  
+
+   //date start
+
+   input {
+     padding:4px;
+     margin-top:13px;
+   }
+ 
+   .react-datepicker-wrapper {
+    width:35%;
+   }
+   //date end
+   
+   .booking {
+       padding: 10px 15px;
+       font-size: 14px;
+       cursor: pointer;
+       text-align: center;
+       text-decoration: none;
+       outline: none;
+       color: #fff;
+       background-color: #4caf50;
+       border: none;
+       border-radius: 15px;
+       box-shadow: 0 9px #99;
+       
+   }
+   //Bookings End
 
 
   //Responsive

@@ -4,40 +4,40 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { GiCampingTent } from "react-icons/gi";
 import { GiTreehouse } from "react-icons/gi";
-import moment from "moment";
+import { GiRiver } from "react-icons/gi";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function Camping() {
-  // const [price, setPrice] = useState("");
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [river, setRiver] = useState(0);
+  const [house, setHouse] = useState(0);
+  const [tent, setTent] = useState(0);
+
   return (
     <Section id="sectionContainer">
       <Carousel infiniteLoop autoPlay>
         <div className="image">
           <img
-            src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            src="https://images.unsplash.com/photo-1537225228614-56cc3556d7ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             alt="camp"
           />
         </div>
         <div className="image">
           <img
-            src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            src="https://images.unsplash.com/photo-1629248457649-b082812aea6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             alt="camp"
           />
         </div>
         <div className="image">
           <img
-            src="https://imageio.forbes.com/specials-images/imageserve/5fc11934ca70014f79b8b2c8/0x0.jpg?format=jpg&width=1200&fit=bounds"
+            src="https://images.unsplash.com/photo-1503232478550-492d531afef9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80"
             alt="camp"
           />
         </div>
         <div className="image">
           <img
-            src="https://images.unsplash.com/photo-1502218808493-e5fd26249efc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt="camp"
-          />
-        </div>
-        <div className="image">
-          <img
-            src="https://images.unsplash.com/photo-1536646506670-821b8a6bbbca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            src="https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             alt="camp"
           />
         </div>
@@ -77,21 +77,29 @@ export default function Camping() {
             picturesque view of the Bir valley below and the cool breeze
             brushing against gliders make for a thrilling adventure.<br></br>
             <br></br>
-            Day 1 - Arrive at campsite <br></br>1. As you arrive at campsite
-            you’ll be required to complete-check-in formalities <br></br> 2.
-            Enjoy camp activities in an in house cafe at the camp. Go for a
-            short jungle trek of 1 hour.<br></br> 3. You can enjoy camping
-            activities like Jenga, dart etc<br></br> 4. The first day at the
-            camp will end with in-house group activities, complimentary bonfire,
-            light music and dinner
+            Day 1 - Arrive at campsite <br></br>
+            <br></br>1. As you arrive at campsite you’ll be required to
+            complete-check-in formalities <br></br> 2. Enjoy camp activities in
+            an in house cafe at the camp. Go for a short jungle trek of 1 hour.
+            <br></br> 3. You can enjoy camping activities like dart etc<br></br>{" "}
+            4. The first day at the camp will end with in-house group
+            activities, complimentary bonfire, light music and dinner
             <br></br>
             <br></br>
-            Day 2 - Paragliding and checkout from campsite<br></br>1. Post
-            Breakfast , The Group will head to paragliding takeoff point{" "}
-            <br></br>2. The flight lasts 20 minutes with experienced glider
-            <br></br> 3. The pilot will take care of controlling the flight
-            while you enjoy the mesmerizing views <br></br>4. You will then come
-            back to camp to end the tour here
+            Day 2 - Rafting, Paragliding and Return<br></br>
+            <br></br>
+            1. After breakfast this morning, you will be reaching at the
+            starting point of your rafting this morning in Kullu.<br></br>
+            2. After safety instructions and gear check, you will begin your
+            rafting expedition on the river which is 7 km long and takes about
+            35 to 45 minutes to complete.<br></br>
+            3. Next, go to the site where paragliding begins to start another
+            adventure (can be arranged at an additional cost).<br></br>
+            4. Fly high above the valley and observe the Beas river and Kullu
+            Valley at their scenic best.<br></br>
+            5. Reach Manali Camps and pack up your bags.<br></br>
+            6. You will be checking out of the camps to bring the experience to
+            an end.<br></br>
           </p>
         </div>
         <div>
@@ -130,7 +138,8 @@ export default function Camping() {
           <div className="content">
             <h1 className="title">Accommodation</h1>
             <p className="para">
-              Tree House <GiTreehouse />, Tent <GiCampingTent />
+              River Rafting <GiRiver /> , Tree House <GiTreehouse /> , Tent
+              <GiCampingTent />
             </p>
           </div>
         </div>
@@ -141,10 +150,106 @@ export default function Camping() {
       {/* Booking */}
 
       <div className="container">
+        <br></br>
         <h1>Select Camping Dates</h1>
-        <h4>Check In {moment(new Date()).format("MMMM Do YYYY")} </h4>
+        <br></br>
+        <div className="date">
+          <h4 className="checkIn">Check In </h4>
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            showTimeSelect
+            minDate={new Date()}
+            dateFormat="Pp"
+            placeholderText="Select Date"
+          />
+          <br></br>
+          <br></br>
+        </div>
 
-        <h4>Check Out {moment(new Date()).format("MMMM Do YYYY")}</h4>
+        <table className="table">
+          <tr className="heading">
+            <th>Type</th>
+            <th>Price per camper(s)</th>
+            <th>Quantity</th>
+            <th>No of People</th>
+            <th>Total Price</th>
+          </tr>
+          <tr>
+            <td>River Rafting</td>
+            <td>1000/2</td>
+            <td>
+              <h4 className="type">{river}</h4>
+              <div className="btnContainer">
+                <button
+                  className="btn"
+                  onClick={() => setRiver(river - (river > 0 ? 1 : 0))}
+                >
+                  -
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => setRiver(river + (river < 10 ? 1 : 0))}
+                >
+                  +
+                </button>
+              </div>
+            </td>
+            <td> {river * 2}</td>
+            <td> {river * 1000}</td>
+          </tr>
+          <tr>
+            <td>Tree House</td>
+            <td>4500/2</td>
+            <td>
+              <h4 className="type">{house}</h4>
+              <div className="btnContainer">
+                <button
+                  className="btn"
+                  onClick={() => setHouse(house - (house > 0 ? 1 : 0))}
+                >
+                  -
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => setHouse(house + (house < 10 ? 1 : 0))}
+                >
+                  +
+                </button>
+              </div>
+            </td>
+            <td> {house * 2}</td>
+            <td> {house * 4500}</td>
+          </tr>
+          <tr>
+            <td>Tent</td>
+            <td>2500/2</td>
+            <td>
+              <h4 className="type">{tent}</h4>
+              <div className="btnContainer">
+                <button
+                  className="btn"
+                  onClick={() => setTent(tent - (tent > 0 ? 1 : 0))}
+                >
+                  -
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => setTent(tent + (tent < 10 ? 1 : 0))}
+                >
+                  +
+                </button>
+              </div>
+            </td>
+            <td> {tent * 2}</td>
+            <td> {tent * 2500}</td>
+          </tr>
+        </table>
+        <br></br>
+
+        <button className="booking">Book Camp</button>
+        <br></br>
+        <br></br>
       </div>
       {/* Booking End */}
     </Section>
@@ -163,7 +268,10 @@ const Section = styled.section`
   .carousel.carousel-slider .control-arrow {
     // background: #595f5f;
   }
- 
+  
+  .slider-wrapper {
+    transition-duration:600ms;
+  }
   .carousel .carousel-status{
     display:none;
   }
@@ -228,11 +336,75 @@ const Section = styled.section`
     }
   }
 
-  .container {
-    text-align:center;
-    //Booking Styling
+
+  //Bookings start
+ .container{
+  font-family: 'Lato', sans-serif;
+  line-height:1.5rem;
+   text-align:center;
+  float:center;
+  background-color: #e6ffff;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    transform: translateX(0.4rem) translateY(-1rem);
+    box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 15px;
+    
   }
 
+ }
+   .table {
+     padding:15px 15px;
+     margin:auto;
+     table-layout:fixed;
+ }
+
+ .heading {
+   background-color:#ffff66;
+   border:none;
+   border-radius:15px;
+  
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    border:none;
+  }
+
+  .btn{
+    margin:3px;
+    padding:5px;
+ 
+  
+  }
+  //date start
+
+  input {
+    padding:4px;
+    margin-top:13px;
+  }
+
+  .react-datepicker-wrapper {
+   width:35%;
+  }
+  //date end
+  
+  .booking {
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #99;
+      
+  }
+  //Bookings End
 
   //Responsive
 
@@ -271,4 +443,5 @@ const Section = styled.section`
             max-height: 100%;
             width: 100%;
           }
+         
 `;

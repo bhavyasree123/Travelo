@@ -39,9 +39,9 @@ export default function App() {
         <Route path="/MountainBiking" component={MountainBiking}></Route>
         <Route path="/ZipLining" component={ZipLining}></Route>
         <Route path="/SkyDiving" component={SkyDiving}></Route>
-
         <Route path="/Testimonials" component={Testimonials}></Route>
       </Switch>
+      <ScrollToTop />
     </Router>
   );
 }
