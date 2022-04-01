@@ -10,6 +10,7 @@ import CliffJumping from "./components/activities/specificpage/CliffJumping";
 import MountainBiking from "./components/activities/specificpage/MountainBiking";
 import ZipLining from "./components/activities/specificpage/ZipLining";
 import SkyDiving from "./components/activities/specificpage/SkyDiving";
+import SignIn from "./components/SignIn";
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/SkyDiving" component={SkyDiving}></Route>
         <Route path="/Testimonials" component={Testimonials}></Route>
       </Switch>
+      {/* <SignIn /> */}
       <ScrollToTop />
     </Router>
   );

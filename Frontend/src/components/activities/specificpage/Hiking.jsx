@@ -10,6 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function Hiking() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [tent, setTent] = useState(0);
+  const [backPack, setBackPack] = useState(0);
   return (
     <Section id="sectionContainer">
       <Carousel infiniteLoop autoPlay>
@@ -122,7 +123,7 @@ export default function Hiking() {
             onChange={(date) => setSelectedDate(date)}
             showTimeSelect
             minDate={new Date()}
-            dateFormat="Pp"
+            dateFormat="dd/MM/yyyy , p"
             placeholderText="Select Date"
           />
           <br></br>
@@ -159,6 +160,31 @@ export default function Hiking() {
             </td>
             <td> {tent * 2}</td>
             <td> {tent * 2500}</td>
+          </tr>
+          <tr>
+            <td>BackPack</td>
+            <td>1500/1</td>
+            <td>
+              <h4 className="type">{backPack}</h4>
+              <div className="btnContainer">
+                <button
+                  className="btn"
+                  onClick={() => setBackPack(backPack - (backPack > 0 ? 1 : 0))}
+                >
+                  -
+                </button>
+                <button
+                  className="btn"
+                  onClick={() =>
+                    setBackPack(backPack + (backPack < 10 ? 1 : 0))
+                  }
+                >
+                  +
+                </button>
+              </div>
+            </td>
+            <td> {backPack * 1}</td>
+            <td> {backPack * 1500}</td>
           </tr>
         </table>
         <br></br>
@@ -271,6 +297,8 @@ const Section = styled.section`
       padding:15px 15px;
       margin:auto;
       table-layout:fixed;
+      width: fit-content;
+
   }
  
   .heading {
@@ -296,6 +324,8 @@ const Section = styled.section`
    input {
      padding:4px;
      margin-top:13px;
+     text-align:center;
+
    }
  
    .react-datepicker-wrapper {
@@ -315,7 +345,7 @@ const Section = styled.section`
        border: none;
        border-radius: 15px;
        box-shadow: 0 9px #99;
-       
+
    }
    //Bookings End
 

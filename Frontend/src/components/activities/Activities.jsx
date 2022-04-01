@@ -184,11 +184,10 @@ const Section = styled.section`
         display: flex;
         align-items: center;
        
-        }
-        
+       }
         display: flex;
         justify-content: space-between;
-      }
+  }
       .distance {
         display: flex;
         justify-content: space-between;

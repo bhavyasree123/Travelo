@@ -133,7 +133,7 @@ export default function SkyDiving() {
             onChange={(date) => setSelectedDate(date)}
             showTimeSelect
             minDate={new Date()}
-            dateFormat="Pp"
+            dateFormat="dd/MM/yyyy , p"
             placeholderText="Select Date"
           />
           <br></br>
@@ -303,6 +303,8 @@ const Section = styled.section`
      padding:15px 15px;
      margin:auto;
      table-layout:fixed;
+     width: fit-content;
+
  }
 
  .heading {
@@ -327,6 +329,8 @@ const Section = styled.section`
   input {
     padding:4px;
     margin-top:13px;
+    text-align:center;
+
   }
 
   .react-datepicker-wrapper {
