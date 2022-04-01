@@ -7,7 +7,7 @@ import Destination4 from "../../assets/Destination4.png";
 import Destination5 from "../../assets/Destination5.png";
 import Destination6 from "../../assets/Destination6.png";
 
-export default function Activities() {
+export default function Adventures() {
   const data = [
     {
       image: Destination1,
@@ -64,17 +64,17 @@ export default function Activities() {
 
   const packages = [
     {
-      name: "Activities",
-      href: "/Activities",
+      name: "Adventures",
+      href: "/Adventures",
     },
-    { name: "Events", href: "/Events" },
+    { name: "Activities", href: "/Activities" },
+    {
+      name: "Events",
+      href: "/Events",
+    },
     {
       name: "Gallery",
       href: "/Gallery",
-    },
-    {
-      name: "None",
-      href: "/none",
     },
   ];
   const [active, setActive] = useState(packages[0].name);
