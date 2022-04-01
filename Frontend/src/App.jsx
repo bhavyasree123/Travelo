@@ -11,6 +11,7 @@ import ZipLining from "./components/adventures/specificpage/ZipLining";
 import SkyDiving from "./components/adventures/specificpage/SkyDiving";
 import SignIn from "./components/SignIn";
 import Adventures from "./components/adventures/Adventures";
+
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
