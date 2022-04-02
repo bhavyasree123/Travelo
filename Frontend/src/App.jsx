@@ -9,8 +9,9 @@ import CliffJumping from "./components/adventures/specificpage/CliffJumping";
 import MountainBiking from "./components/adventures/specificpage/MountainBiking";
 import ZipLining from "./components/adventures/specificpage/ZipLining";
 import SkyDiving from "./components/adventures/specificpage/SkyDiving";
-import SignIn from "./components/SignIn";
 import Adventures from "./components/adventures/Adventures";
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
 
 export default function App() {
   useEffect(() => {
@@ -33,7 +34,9 @@ export default function App() {
   }, []);
   return (
     <Router>
+      <Navbar />
       <Switch>
+        <Route path="/" exact component={Landing}></Route>
         <Route path="/Adventures" component={Adventures}></Route>
         <Route path="/Camping" component={Camping}></Route>
         <Route path="/Hiking" component={Hiking}></Route>

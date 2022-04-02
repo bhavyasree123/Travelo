@@ -37,7 +37,7 @@ export default function Camping() {
         </div>
         <div className="image">
           <img
-            src="https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            src="https://images.unsplash.com/photo-1625834509314-3b12c6153624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             alt="camp"
           />
         </div>
@@ -257,8 +257,8 @@ export default function Camping() {
 }
 
 const Section = styled.section`
+padding-top:6rem;
 
- 
   .carousel {
     display: flex;
     justify-content: center;
@@ -282,7 +282,7 @@ const Section = styled.section`
 
   .carousel .slider {
     background-size: cover;
-    height: 80vh;
+    height: 70vh;
     border-radius: 25px;
   }
   .carousel .slide img {
@@ -411,10 +411,14 @@ const Section = styled.section`
   //Responsive
 
   @media all and (max-width: 1024px) {
+    padding-top:4rem;
+
     .carousel .slide img {
      width:auto;
     }
     @media all and (max-width:425px) {
+      padding-top:4rem;
+
       .carousel .slider {
     height: 35vh;
       

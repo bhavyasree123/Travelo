@@ -1,52 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import AdventuresData from "./AdventuresData";
 export default function Adventures() {
-  {
-    /* Packages Routes Start */
-  }
-  const packages = [
-    {
-      name: "Adventures",
-      href: "/Adventures",
-    },
-    { name: "Activities", href: "/Activities" },
-    {
-      name: "Events",
-      href: "/Events",
-    },
-    {
-      name: "Gallery",
-      href: "/Gallery",
-    },
-  ];
-  const [active, setActive] = useState(packages[0].name);
-
   return (
     <Section id="recommend">
-      <div className="title">
-        <h2>DISCOVER THE WORLD</h2>
-      </div>
-      <div className="packages">
-        <ul>
-          {packages.map((pkg, index) => {
-            return (
-              <li
-                key={index}
-                className={active === pkg.name ? "active" : ""}
-                onClick={() => setActive(pkg.name)}
-              >
-                <a className="href" href={pkg.href}>
-                  {pkg.name}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
-      {/* Packages Routes End */}
-
       <div className="destinations">
         {AdventuresData.map((destination) => {
           return (
@@ -73,38 +30,10 @@ export default function Adventures() {
 }
 
 const Section = styled.section`
-  padding: 2rem 0;
+  padding: 10rem 0;
   .title {
     text-align: center;
     font-size: 1rem;
-  }
-  .packages {
-    display: flex;
-    justify-content: center;
-    column-gap: 25px;
-    margin: 2rem 0;
-    ul {
-      display: flex;
-      list-style-type: none;
-      width: max-content;
-      li {
-        padding: 1rem 2rem;
-        // border-bottom: 0.3rem solid #56d678;
-        color:black;
-        font-size:1rem;
-        font-weight:bold;
-      }
-      .active {
-        border-bottom: 0.5rem solid #8338ec;
-      }
-
-      .href {
-        text-decoration:none;
-        color:#000;
-      }
-      
-      
-    }
   }
   .destinations {
     display: grid;
@@ -155,6 +84,7 @@ const Section = styled.section`
     }
   }
   @media screen and (min-width: 280px) and (max-width: 768px) {
+    padding: 5rem 0;
     .packages {
       ul {
         li {
