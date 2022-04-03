@@ -58,7 +58,6 @@ export default function App() {
         <Route path="/Events" component={Events}></Route>
         <Route path="/Gallery" component={Gallery}></Route>
         <Route path="/MapPage" component={MapPage}></Route>
-
       </Switch>
       {/* <SignIn /> */}
       <ScrollToTop />

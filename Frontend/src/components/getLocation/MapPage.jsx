@@ -39,7 +39,7 @@ export default function MapPage() {
     },[type, coordinates, bounds])
 
   return (
-    <div >
+    <div style={{ paddingTop: "7rem" }}>
 
       <CssBaseline/>
       <Grid container spacing ={3} style={{width: '100%'}}>
