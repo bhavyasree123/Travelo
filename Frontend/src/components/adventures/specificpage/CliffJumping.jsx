@@ -141,7 +141,7 @@ export default function CliffJumping() {
 
 const Section = styled.section`
 
- 
+ padding-top:4rem;
   .carousel {
     display: flex;
     justify-content: center;

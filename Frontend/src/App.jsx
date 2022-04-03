@@ -13,7 +13,6 @@ import Adventures from "./components/adventures/Adventures";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Activities from "./components/activities/Activities";
-
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -38,6 +37,9 @@ export default function App() {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Landing}></Route>
+        {/* <Route path="/Testimonials" component={Testimonials}></Route> */}
+
+        {/* Adventures Routing Start */}
         <Route path="/Adventures" component={Adventures}></Route>
         <Route path="/Camping" component={Camping}></Route>
         <Route path="/Hiking" component={Hiking}></Route>
@@ -47,7 +49,6 @@ export default function App() {
         <Route path="/SkyDiving" component={SkyDiving}></Route>
         <Route path="/Testimonials" component={Testimonials}></Route>
         <Route path="/Activities" component={Activities}></Route>
-
       </Switch>
       {/* <SignIn /> */}
       <ScrollToTop />

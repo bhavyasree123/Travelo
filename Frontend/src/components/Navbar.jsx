@@ -30,16 +30,16 @@ export default function Navbar() {
                 <a href="/Activities">Activities</a>
               </li>
               <li>
-                <a href="#">Events</a>
+                <a href="/Events">Events</a>
               </li>
               <li>
-                <a href="#">Gallery</a>
+                <a href="/Gallery">Gallery</a>
               </li>
               <li>
-                <a href="#">SignIn</a>
+                <a href="/SignIn">SignIn</a>
               </li>
               <li>
-                <a href="#">SignUp</a>
+                <a href="/SignUP">SignUp</a>
               </li>
             </ul>
           </div>

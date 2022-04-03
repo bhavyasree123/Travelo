@@ -206,7 +206,7 @@ export default function SkyDiving() {
 }
 
 const Section = styled.section`
-
+padding-top:4rem;
  
   .carousel {
     display: flex;
