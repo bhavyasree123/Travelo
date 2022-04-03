@@ -1,19 +1,18 @@
-const gallerydata = {
-galldata :[
+const eventsdata = [
     {
-      image: "https://i.ytimg.com/vi/a9y7FEHaQVs/maxresdefault.jpg",
+      image: "https://www.bookeventz.com/blog/wp-content/uploads/2020/05/Summer-Pool-Party-Ideas.jpg",
       id:"1",
-      title: "Dance Concert",
-      subTitle: "Singapore, officialy thr Republic of Singapore, is a",
-      cost: "38,800",
+      title: "Pool Party",
+      subTitle: "Pool Party",
+      cost: "2400",
       duration: "Approx 2 night trip",
     },
     {
-      image: "https://gossipkigalliyan.com/wp-content/uploads/2019/06/58049151_871409649864563_6469656868875665408_n.jpg",
+      image: "https://i.ytimg.com/vi/a9y7FEHaQVs/maxresdefault.jpg",
       id: "2",
-      title: "Pupper Party",
-      subTitle: "Thailand is a Southeast Asia country. It's known for",
-      cost: "54,200",
+      title: "Dance Concert",
+      subTitle: "Dance Concert",
+      cost: "5,200",
       duration: "Approx 2 night trip",
     },
     {
@@ -25,17 +24,17 @@ galldata :[
       duration: "Approx 2 night trip",
     },
     {
-      image: "https://adventuresome.in/wp-content/uploads/2019/08/jumping-from-sky-min-1280x720.jpg",
+      image: "https://4.imimg.com/data4/FA/NN/MY-12958090/dj-service-500x500.jpeg",
       id: "4",
-      title: "SKYDIVING",
-      subTitle: "New Zealand is an island country in the",
+      title: "Dj Party",
+      subTitle: "Exhibition",
       cost: "24,100",
       duration: "Approx 1 night trip",
     },
     {
-      image: "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2019/12/21/Pictures/ht-pune_bcdb9156-23de-11ea-b71b-55a416c89533.jpg",
+      image: "http://s3.amazonaws.com/busites_www/kissonline/content/articles/newcastle.jpg",
       id: "5",
-      title: "Rose exhibition",
+      title: "Band Concert",
       subTitle: "Bora Bora is a small South Pacific island northwest of",
       cost: "95,400",
       duration: "Approx 2 night 2 day trip",
@@ -49,5 +48,4 @@ galldata :[
       duration: "Approx 3 night 2 day trip",
     },
   ]
-};
-  export default gallerydata;
+  export default eventsdata;

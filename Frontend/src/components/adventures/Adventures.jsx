@@ -54,6 +54,8 @@ const Section = styled.section`
       }
       img {
         width: 100%;
+        height:300px;
+        border-radius:5px;
       }
       .info {
         display: flex;

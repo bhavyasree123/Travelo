@@ -13,6 +13,8 @@ import Adventures from "./components/adventures/Adventures";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Activities from "./components/activities/Activities";
+import Events from "./components/events/Events";
+import Gallery from "./components/gallery/Gallery";
 
 export default function App() {
   useEffect(() => {
@@ -47,6 +49,8 @@ export default function App() {
         <Route path="/SkyDiving" component={SkyDiving}></Route>
         <Route path="/Testimonials" component={Testimonials}></Route>
         <Route path="/Activities" component={Activities}></Route>
+        <Route path="/Events" component={Events}></Route>
+        <Route path="/Gallery" component={Gallery}></Route>
 
       </Switch>
       {/* <SignIn /> */}

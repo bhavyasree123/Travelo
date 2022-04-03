@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import activitiesdata from "./activitiesdata";
-export default function Events() {
+import gallerydata from "./gallerydata";
+export default function Gallery() {
   return (
     <Section id="recommend">
       <div className="destinations">
-        {activitiesdata.map((destination) => {
+        {gallerydata.map((destination) => {
           return (
             <div className="destination">
               <img src={destination.image} alt="" />

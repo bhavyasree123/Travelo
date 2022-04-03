@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import activitiesdata from "./activitiesdata";
+import eventsdata from "./eventsdata";
 export default function Events() {
   return (
     <Section id="recommend">
       <div className="destinations">
-        {activitiesdata.map((destination) => {
+        {eventsdata.map((destination) => {
           return (
             <div className="destination">
               <img src={destination.image} alt="" />
@@ -57,6 +57,7 @@ const Section = styled.section`
         height:300px;
         border-radius:5px;
       }
+      
       .info {
         display: flex;
         align-items: center;
