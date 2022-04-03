@@ -36,10 +36,10 @@ export default function Navbar() {
                 <a href="/Gallery">Gallery</a>
               </li>
               <li>
-                <a href="/SignIn">SignIn</a>
+                <a href="/Login">LogIn</a>
               </li>
               <li>
-                <a href="/SignUP">SignUp</a>
+                <a href="/MapPage">Map</a>
               </li>
             </ul>
           </div>

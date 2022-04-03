@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
@@ -15,8 +15,10 @@ import Landing from "./components/Landing";
 import Activities from "./components/activities/Activities";
 import Events from "./components/activities/Activities";
 import Gallery from "./components/gallery/Gallery";
+import MapPage from "./components/getLocation/MapPage";
 
 export default function App() {
+
   useEffect(() => {
     const sr = scrollreveal({
       origin: "top",
@@ -35,6 +37,7 @@ export default function App() {
       },
     );
   }, []);
+
   return (
     <Router>
       <Navbar />
@@ -54,6 +57,7 @@ export default function App() {
         <Route path="/Activities" component={Activities}></Route>
         <Route path="/Events" component={Events}></Route>
         <Route path="/Gallery" component={Gallery}></Route>
+        <Route path="/MapPage" component={MapPage}></Route>
 
       </Switch>
       {/* <SignIn /> */}
