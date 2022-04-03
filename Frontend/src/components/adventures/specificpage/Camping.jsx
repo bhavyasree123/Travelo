@@ -282,7 +282,7 @@ padding-top:6rem;
 
   .carousel .slider {
     background-size: cover;
-    height: 70vh;
+    height: 80vh;
     border-radius: 25px;
   }
   .carousel .slide img {

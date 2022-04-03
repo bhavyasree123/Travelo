@@ -120,7 +120,7 @@ export default function ZipLining() {
 
 const Section = styled.section`
 
- 
+padding-top:4rem; 
   .carousel {
     display: flex;
     justify-content: center;

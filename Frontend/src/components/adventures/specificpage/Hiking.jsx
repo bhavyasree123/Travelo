@@ -199,7 +199,7 @@ export default function Hiking() {
 }
 
 const Section = styled.section`
-
+padding-top:4rem;
  
   .carousel {
     display: flex;
