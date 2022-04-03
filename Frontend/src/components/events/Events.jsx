@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import eventsdata from "./eventsdata";
+
 export default function Events() {
   return (
     <Section id="recommend">
