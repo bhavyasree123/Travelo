@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
@@ -16,9 +16,9 @@ import Activities from "./components/activities/Activities";
 import Events from "./components/events/Events";
 import Gallery from "./components/gallery/Gallery";
 import MapPage from "./components/getLocation/MapPage";
+import Exhibition from "./components/activities/specificpage/Exhibition";
 
 export default function App() {
-
   useEffect(() => {
     const sr = scrollreveal({
       origin: "top",
@@ -47,14 +47,20 @@ export default function App() {
 
         {/* Adventures Routing Start */}
         <Route path="/Adventures" component={Adventures}></Route>
-        <Route path="/Camping" component={Camping}></Route>
-        <Route path="/Hiking" component={Hiking}></Route>
-        <Route path="/CliffJumping" component={CliffJumping}></Route>
-        <Route path="/MountainBiking" component={MountainBiking}></Route>
-        <Route path="/ZipLining" component={ZipLining}></Route>
-        <Route path="/SkyDiving" component={SkyDiving}></Route>
-        <Route path="/Testimonials" component={Testimonials}></Route>
+        <Route path="/Adventure/Camping" component={Camping}></Route>
+        <Route path="/Adventure/Hiking" component={Hiking}></Route>
+        <Route path="/Adventure/CliffJumping" component={CliffJumping}></Route>
+        <Route
+          path="/Adventure/MountainBiking"
+          component={MountainBiking}
+        ></Route>
+        <Route path="/Adventure/ZipLining" component={ZipLining}></Route>
+        <Route path="/Adventure/SkyDiving" component={SkyDiving}></Route>
+        {/* Adventures Routing End */}
+        {/* Activities Routing Start */}
         <Route path="/Activities" component={Activities}></Route>
+        <Route path="/Activity/Exhibition" component={Exhibition}></Route>
+        {/* Activities Routing End */}
         <Route path="/Events" component={Events}></Route>
         <Route path="/Gallery" component={Gallery}></Route>
         <Route path="/MapPage" component={MapPage}></Route>
