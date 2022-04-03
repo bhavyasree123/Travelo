@@ -12,6 +12,7 @@ import SkyDiving from "./components/adventures/specificpage/SkyDiving";
 import Adventures from "./components/adventures/Adventures";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
+import Activities from "./components/activities/Activities";
 
 export default function App() {
   useEffect(() => {
@@ -45,6 +46,8 @@ export default function App() {
         <Route path="/ZipLining" component={ZipLining}></Route>
         <Route path="/SkyDiving" component={SkyDiving}></Route>
         <Route path="/Testimonials" component={Testimonials}></Route>
+        <Route path="/Activities" component={Activities}></Route>
+
       </Switch>
       {/* <SignIn /> */}
       <ScrollToTop />

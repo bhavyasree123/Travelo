@@ -27,7 +27,7 @@ export default function Navbar() {
                 <a href="/Adventures">Adventures</a>
               </li>
               <li>
-                <a href="#">Activities</a>
+                <a href="/Activities">Activities</a>
               </li>
               <li>
                 <a href="#">Events</a>
