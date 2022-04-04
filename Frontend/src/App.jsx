@@ -17,6 +17,11 @@ import Events from "./components/events/Events";
 import Gallery from "./components/gallery/Gallery";
 import MapPage from "./components/getLocation/MapPage";
 import Exhibition from "./components/activities/specificpage/Exhibition";
+import IndiaArtFair from "./components/activities/specificpage/IndiaArtFair";
+import DairyExpo from "./components/activities/specificpage/DairyExpo";
+import PupperParty from "./components/activities/specificpage/PupperParty";
+import RoseExhibition from "./components/activities/specificpage/RoseExhibition";
+import WildLifeTour from "./components/activities/specificpage/WildLifeTour";
 
 export default function App() {
   useEffect(() => {
@@ -60,6 +65,11 @@ export default function App() {
         {/* Activities Routing Start */}
         <Route path="/Activities" component={Activities}></Route>
         <Route path="/Activity/Exhibition" component={Exhibition}></Route>
+        <Route path="/Activity/IndiaArtFair" component={IndiaArtFair}></Route>
+        <Route path="/Activity/DairyExpo" component={DairyExpo}></Route>
+        <Route path="/Activity/PupperParty" component={PupperParty}></Route>
+        <Route path="/Activity/RoseExhibition" component={RoseExhibition}></Route>
+        <Route path="/Activity/WildLifeTour" component={WildLifeTour}></Route>
         {/* Activities Routing End */}
         <Route path="/Events" component={Events}></Route>
         <Route path="/Gallery" component={Gallery}></Route>

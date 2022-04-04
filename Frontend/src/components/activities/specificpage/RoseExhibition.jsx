@@ -5,32 +5,32 @@ import { Carousel } from "react-responsive-carousel";
 // import {Gi3DGlasses  } from "react-icons/gi";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function Exhibition() {
+export default function RoseExhibition() {
   return (
     <Section id="sectionContainer">
       <Carousel infiniteLoop autoPlay>
         <div className="image">
           <img
-            src="https://st.adda247.com/https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2021/12/03080126/9cd685c2-502e-11ec-b4f2-deefa8af42fb_1638092778486-1568x882.jpg"
-            alt="exhibition"
+            src="https://media.istockphoto.com/photos/professional-gardener-pruning-rose-plants-picture-id1060532396?b=1&k=20&m=1060532396&s=170667a&w=0&h=8nuRG5EagRg-m3KOVhOKjSUV9XcAqu4ycoZdX28brZs="
+            alt="RoseExhibition"
           />
         </div>
         <div className="image">
           <img
-            src="https://imgmedia.lbb.in/media/2019/12/5e05c38f0a9ea7689cac6ecc_1577436047804.JPG"
-            alt="exhibition"
+            src="https://images.unsplash.com/photo-1439122955805-cbac26b73f3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80"
+            alt="RoseExhibition"
           />
         </div>
         <div className="image">
           <img
-            src="https://www.thedivineindia.com/img/trade-fair.jpg"
-            alt="exhibition"
+            src="https://i0.wp.com/tiqets-cdn.s3.eu-west-1.amazonaws.com/wordpress/blog/wp-content/uploads/2021/12/17094936/luca-vavassori-283abVB9hsY-unsplash-1024x683.jpg?resize=1024%2C683&ssl=1"
+            alt="RoseExhibition"
           />
         </div>
         <div className="image">
           <img
-            src="https://cdn.i-scmp.com/sites/default/files/styles/og_twitter_scmp_analysis/public/d8/images/methode/2019/05/21/73b26fd8-7b8f-11e9-8126-9d0e63452fe9_image_hires_151809.jpg?itok=FIEMSQb1&v=1558423097"
-            alt="exhibition"
+            src="https://images.unsplash.com/photo-1568010967378-b92ea68220c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvd2VyJTIwZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80"
+            alt="RoseExhibition"
           />
         </div>
       </Carousel>
@@ -41,17 +41,20 @@ export default function Exhibition() {
           <br></br>
           <h1 className="title"> Description :-</h1>
           <p className="para">
-            Trade shows are temporary events in different recurring intervals
-            where new products and services are presented. The number of trade
-            fairs is steadily increasing worldwide; therefore it is important
-            for exhibitors and visitors to get a quick overview and find the
-            right trade shows for themselves. With this platform, Sima Media
-            offers a fast and detailed way to search for exhibitions by name,
-            venue, date, industry and services. A wide range of trade fair
-            suppliers can be found in our exhibition service provider database.
-            In addition, we provide the booking of exhibition hotels and
-            information on a wide range of attractions in many major
-            international exhibition cities.
+            A rose is a woody perennial flowering plant of the genus Rosa, in
+            the family Rosaceae, or the flower it bears. There are over three
+            hundred species and tens of thousands of cultivars. They form a
+            group of plants that can be erect shrubs, climbing, or trailing,
+            with stems that are often armed with sharp prickles.Their flowers
+            vary in size and shape and are usually large and showy, in colours
+            ranging from white through yellows and reds. Most species are native
+            to Asia, with smaller numbers native to Europe, North America, and
+            northwestern Africa. Species, cultivars and hybrids are all widely
+            grown for their beauty and often are fragrant. Roses have acquired
+            cultural significance in many societies. Rose plants range in size
+            from compact, miniature roses, to climbers that can reach seven
+            meters in height. Different species hybridize easily, and this has
+            been used in the development of the wide range of garden roses.
           </p>
         </div>
 
@@ -60,13 +63,14 @@ export default function Exhibition() {
         <div className="content">
           <h1 className="title"> About the activity : - </h1>
           <p className="para">
-          On the website TradeFairDates people can see a list of fairs and exhibitions from all over the world which are sorted by the exhibiting companiesâ€™ industries and fields of activity. With more than 420 exhibition sectors being listed in this outline, you will get an overview of the most important dates and venues. Especially today, fairs are an essential tool for product presentation. Due to the growing diversity and the increasing need for explanations of products, nowadays a fair has a multifunctional character that goes beyond the mere product sale. Thanks to the selection of fairs sorted by branches, you will find exhibitions of all kinds of industries – from the agricultural show to the motorcycle show. <br></br>
-            <br></br>
+            A rose show is a horticultural exhibition focusing exclusively on
+            roses. <br></br>
             Day 1 - Arrive at Exhibition site <br></br>
             <br></br>1. As you arrive at Exhibition site you’ll be required to
-            complete-check-in formalities <br></br> 2. Make yourselves comfortable at the accommodation provided to you. 
-            <br></br> 3. Enjoy the attraction places nearby<br></br>{" "}
-            4. The first day at the camp will end with light music and dinner
+            complete-check-in formalities <br></br> 2. Make yourselves
+            comfortable at the accommodation provided to you.
+            <br></br> 3. Enjoy the attraction places nearby<br></br> 4. The
+            first day at the camp will end with light music and dinner
             <br></br>
             <br></br>
             Day 2 - Attending Exhibitions and Return<br></br>
@@ -85,11 +89,18 @@ export default function Exhibition() {
           <div className="content">
             <h1 className="title">Advisory</h1>
             <p className="para">
-              1. A valid enrty pass is required to enter and participate inthe trade fairs/ exhibition.
-            <br></br>
-              2. Due process for custom clearance should be followed, through agencies recommended by the organizers, in order to ensure that the products/exhibits reach the venue well in time.<br></br>
-              3.  Efforts should be made to reach out to potential customers and business partners before and during the trade fair/ exhibitions through B2B/ B2C platforms. <br></br>
-              4. These could be coordinated through the organizers or the relevant Industry Association coordinating the Indian participation in the event<br></br>
+              1. A valid enrty pass is required to enter and participate inthe
+              trade fairs/ exhibition.
+              <br></br>
+              2. Due process for custom clearance should be followed, through
+              agencies recommended by the organizers, in order to ensure that
+              the products/exhibits reach the venue well in time.<br></br>
+              3. Efforts should be made to reach out to potential customers and
+              business partners before and during the trade fair/ exhibitions
+              through B2B/ B2C platforms. <br></br>
+              4. These could be coordinated through the organizers or the
+              relevant Industry Association coordinating the Indian
+              participation in the event<br></br>
               5. The package is exclusive of any en-route or personal expenses,
               videography and photography of the flight.<br></br>
               6. ID proof is mandatory for each individual guest at the time of
@@ -107,7 +118,7 @@ export default function Exhibition() {
           <div className="content">
             <h1 className="title">Accommodation</h1>
             <p className="para">
-              Hotels 
+              Hotels
               {/* <Gi3DGlasses /> */}
             </p>
           </div>

@@ -17,6 +17,7 @@ const activitiesdata = [
     subTitle: "Art & craft lovers, the India Art Fair is back with a bang ",
     cost: "3000",
     duration: "Approx 2 days",
+    href: "/Activity/IndiaArtFair"
   },
   {
     image: "https://www.groupeserap.com/upimg/diapo/zoom/574.jpg",
@@ -25,6 +26,7 @@ const activitiesdata = [
     subTitle: "SERAP INDIA AT THE INDIA INTERNATIONAL DAIRY EXPO",
     cost: "5,500",
     duration: "Approx 1 day",
+    href: "/Activity/DairyExpo"
   },
   {
     image:
@@ -34,6 +36,7 @@ const activitiesdata = [
     subTitle: "Wildlife Tour of East India’s Forests",
     cost: "4,100",
     duration: "Approx 1 Day",
+    href: "/Activity/WildLifeTour"
   },
   {
     image:
@@ -44,6 +47,7 @@ const activitiesdata = [
       "As many as 2,500 Indian and foreign rose species will be on display in an exhibition",
     cost: "5,400",
     duration: "Approx 2 day ",
+    href: "/Activity/RoseExhibition"
   },
   {
     image:
@@ -53,6 +57,7 @@ const activitiesdata = [
     subTitle: "Super Pupper Party Time to unleash your pet dogs!",
     cost: "8,800",
     duration: "Approx 3 days ",
+    href: "/Activity/PupperParty"
   },
 ];
 export default activitiesdata;

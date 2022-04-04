@@ -5,32 +5,32 @@ import { Carousel } from "react-responsive-carousel";
 // import {Gi3DGlasses  } from "react-icons/gi";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function Exhibition() {
+export default function WildLifeTour() {
   return (
     <Section id="sectionContainer">
       <Carousel infiniteLoop autoPlay>
         <div className="image">
           <img
-            src="https://st.adda247.com/https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2021/12/03080126/9cd685c2-502e-11ec-b4f2-deefa8af42fb_1638092778486-1568x882.jpg"
-            alt="exhibition"
+            src="https://images.unsplash.com/photo-1590514526581-bf7feaee0217?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWFuJTIwZm9yZXN0fGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            alt="wildlifetour"
           />
         </div>
         <div className="image">
           <img
-            src="https://imgmedia.lbb.in/media/2019/12/5e05c38f0a9ea7689cac6ecc_1577436047804.JPG"
-            alt="exhibition"
+            src="https://media.istockphoto.com/photos/bengal-tiger-at-ranthambhore-national-park-in-rajasthan-india-picture-id674191480?b=1&k=20&m=674191480&s=170667a&w=0&h=4VuYZczHkuxdm24bAkOONKraeRLPzZXV8bBXyDXU-9I="
+            alt="wildlifetour"
           />
         </div>
         <div className="image">
           <img
-            src="https://www.thedivineindia.com/img/trade-fair.jpg"
-            alt="exhibition"
+            src="https://images.unsplash.com/photo-1613141354251-efd874abe9c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
+            alt="wildlifetour"
           />
         </div>
         <div className="image">
           <img
-            src="https://cdn.i-scmp.com/sites/default/files/styles/og_twitter_scmp_analysis/public/d8/images/methode/2019/05/21/73b26fd8-7b8f-11e9-8126-9d0e63452fe9_image_hires_151809.jpg?itok=FIEMSQb1&v=1558423097"
-            alt="exhibition"
+            src="https://media.istockphoto.com/photos/group-of-wild-elephants-walking-in-the-tropical-rainforest-meadow-at-picture-id1211692525?b=1&k=20&m=1211692525&s=170667a&w=0&h=x44Hq8qPe19TPnz5m144U0Go-H_ZwducZ44fP_baiSs="
+            alt="wildlifetour"
           />
         </div>
       </Carousel>
@@ -41,17 +41,14 @@ export default function Exhibition() {
           <br></br>
           <h1 className="title"> Description :-</h1>
           <p className="para">
-            Trade shows are temporary events in different recurring intervals
-            where new products and services are presented. The number of trade
-            fairs is steadily increasing worldwide; therefore it is important
-            for exhibitors and visitors to get a quick overview and find the
-            right trade shows for themselves. With this platform, Sima Media
-            offers a fast and detailed way to search for exhibitions by name,
-            venue, date, industry and services. A wide range of trade fair
-            suppliers can be found in our exhibition service provider database.
-            In addition, we provide the booking of exhibition hotels and
-            information on a wide range of attractions in many major
-            international exhibition cities.
+            India is home to a large variety of wildlife. It is a biodiversity
+            hotspot with its various ecosystems ranging from the Himalayas in
+            the north to the evergreen rain forests in the south, the sands of
+            the west to the marshy mangroves of the east. India lies within the
+            Indomalayan realm and is the home to about 7.6% of mammal, 14.7% of
+            amphibian, 6% of bird, 6.2% of reptilian, and 6.0% of flowering
+            plant species.[1] India's forest lands nurture about 500 species of
+            mammals and more than 2000 bird species.
           </p>
         </div>
 
@@ -60,13 +57,21 @@ export default function Exhibition() {
         <div className="content">
           <h1 className="title"> About the activity : - </h1>
           <p className="para">
-          On the website TradeFairDates people can see a list of fairs and exhibitions from all over the world which are sorted by the exhibiting companiesâ€™ industries and fields of activity. With more than 420 exhibition sectors being listed in this outline, you will get an overview of the most important dates and venues. Especially today, fairs are an essential tool for product presentation. Due to the growing diversity and the increasing need for explanations of products, nowadays a fair has a multifunctional character that goes beyond the mere product sale. Thanks to the selection of fairs sorted by branches, you will find exhibitions of all kinds of industries – from the agricultural show to the motorcycle show. <br></br>
+            This travel guide helps you explore every aspect of the wildlife
+            sanctuary, from adventure activities to the sightings in its varied
+            zones, making it a memorable wildlife holiday tour. Surrounded by
+            six different zones, namely, Bijrani, Jhirna, Dhikala, Durgadevi,
+            Sitabani including a newly introduced eco-tourism zone Dhela; the
+            park offers an incredible opportunity for wildlife safari tours.
+            Each zone provides the visitors with lush atmosphere and good forest
+            lodges to dwell in if you feel adventurous. <br></br>
             <br></br>
             Day 1 - Arrive at Exhibition site <br></br>
             <br></br>1. As you arrive at Exhibition site you’ll be required to
-            complete-check-in formalities <br></br> 2. Make yourselves comfortable at the accommodation provided to you. 
-            <br></br> 3. Enjoy the attraction places nearby<br></br>{" "}
-            4. The first day at the camp will end with light music and dinner
+            complete-check-in formalities <br></br> 2. Make yourselves
+            comfortable at the accommodation provided to you.
+            <br></br> 3. Enjoy the attraction places nearby<br></br> 4. The
+            first day at the camp will end with light music and dinner
             <br></br>
             <br></br>
             Day 2 - Attending Exhibitions and Return<br></br>
@@ -85,11 +90,18 @@ export default function Exhibition() {
           <div className="content">
             <h1 className="title">Advisory</h1>
             <p className="para">
-              1. A valid enrty pass is required to enter and participate inthe trade fairs/ exhibition.
-            <br></br>
-              2. Due process for custom clearance should be followed, through agencies recommended by the organizers, in order to ensure that the products/exhibits reach the venue well in time.<br></br>
-              3.  Efforts should be made to reach out to potential customers and business partners before and during the trade fair/ exhibitions through B2B/ B2C platforms. <br></br>
-              4. These could be coordinated through the organizers or the relevant Industry Association coordinating the Indian participation in the event<br></br>
+              1. A valid enrty pass is required to enter and participate inthe
+              trade fairs/ exhibition.
+              <br></br>
+              2. Due process for custom clearance should be followed, through
+              agencies recommended by the organizers, in order to ensure that
+              the products/exhibits reach the venue well in time.<br></br>
+              3. Efforts should be made to reach out to potential customers and
+              business partners before and during the trade fair/ exhibitions
+              through B2B/ B2C platforms. <br></br>
+              4. These could be coordinated through the organizers or the
+              relevant Industry Association coordinating the Indian
+              participation in the event<br></br>
               5. The package is exclusive of any en-route or personal expenses,
               videography and photography of the flight.<br></br>
               6. ID proof is mandatory for each individual guest at the time of
@@ -107,7 +119,7 @@ export default function Exhibition() {
           <div className="content">
             <h1 className="title">Accommodation</h1>
             <p className="para">
-              Hotels 
+              Hotels
               {/* <Gi3DGlasses /> */}
             </p>
           </div>
