@@ -16,6 +16,7 @@ import Activities from "./components/activities/Activities";
 import Events from "./components/events/Events";
 import Gallery from "./components/gallery/Gallery";
 import MapPage from "./components/getLocation/MapPage";
+import Cart from "./components/cart/Cart";
 
 export default function App() {
 
@@ -58,7 +59,8 @@ export default function App() {
         <Route path="/Events" component={Events}></Route>
         <Route path="/Gallery" component={Gallery}></Route>
         <Route path="/MapPage" component={MapPage}></Route>
-      </Switch>
+        <Route path="/Cart" component={Cart}></Route>
+        </Switch>
       {/* <SignIn /> */}
       <ScrollToTop />
     </Router>
