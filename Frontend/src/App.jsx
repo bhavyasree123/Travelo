@@ -25,10 +25,7 @@ import RoseExhibition from "./components/activities/specificpage/RoseExhibition"
 import WildLifeTour from "./components/activities/specificpage/WildLifeTour";
 import Cart from "./components/cart/Cart";
 
-
 export default function App() {
-
-  
   useEffect(() => {
     const sr = scrollreveal({
       origin: "top",
@@ -51,6 +48,7 @@ export default function App() {
   return (
     <Router>
       <Navbar />
+
       <Switch>
         <Route path="/" exact component={Landing}></Route>
         {/* <Route path="/Testimonials" component={Testimonials}></Route> */}
@@ -73,20 +71,31 @@ export default function App() {
         <Route path="/Activity/IndiaArtFair" component={IndiaArtFair}></Route>
         <Route path="/Activity/DairyExpo" component={DairyExpo}></Route>
         <Route path="/Activity/PupperParty" component={PupperParty}></Route>
-        <Route path="/Activity/RoseExhibition" component={RoseExhibition}></Route>
+        <Route
+          path="/Activity/RoseExhibition"
+          component={RoseExhibition}
+        ></Route>
         <Route path="/Activity/WildLifeTour" component={WildLifeTour}></Route>
         {/* Activities Routing End */}
+        {/* Events Routing Start */}
         <Route path="/Events" component={Events}></Route>
+        {/* Events Routing End */}
         {/* Gallery Routing Start */}
         <Route path="/Galleries" component={Gallery}></Route>
-       {/* Gallery Routing End */}
+        <Route
+          path="/Gallery/GalleryPupperParty"
+          component={GalleryPupperParty}
+        ></Route>
         <Route path="/MapPage" component={MapPage}></Route>
         <Route path="/CartPage" component={CartPage}></Route>
         <Route path="/Cart" component={Cart}></Route>
-        </Switch>
+      </Switch>
+      {/* Events Routing End */}
+      <Route path="/Gallery" component={Gallery}></Route>
+      <Route path="/MapPage" component={MapPage}></Route>
+
       {/* <SignIn /> */}
       <ScrollToTop />
     </Router>
-   
   );
 }
