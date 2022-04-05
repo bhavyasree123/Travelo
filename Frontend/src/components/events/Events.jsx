@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import eventsdata from "./eventsdata";
+import ModalData from "./specificpage/ModalData";
 
 export default function Events() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [data, setData] = useState(eventsdata[0]);
+
+  const buttonClick = (destination) => {
+    setIsModalVisible(true);
+    setData(destination);
+  };
+
   return (
     <Section id="recommend">
       <div className="destinations">
@@ -16,15 +25,23 @@ export default function Events() {
                 <h4>{destination.cost}</h4>
               </div>
               <div className="distance">
-                <span>{destination.duration}</span>
+                <span>{destination.location}</span>
 
-                <a className="button" href={destination.href}>
-                  Read More
-                </a>
+                <button
+                  className="button"
+                  onClick={() => buttonClick(destination)}
+                >
+                  Check Availability
+                </button>
               </div>
             </div>
           );
         })}
+        <ModalData
+          data={data}
+          open={isModalVisible}
+          handleClose={() => setIsModalVisible(false)}
+        />
       </div>
     </Section>
   );
