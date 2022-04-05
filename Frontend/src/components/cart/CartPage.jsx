@@ -5,7 +5,7 @@ import activitiesdata from "../activities/activitiesdata";
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState([]);
-  const onAdd = (activitiesdata) =>{
+  const onAdd = (id) =>{
     const exist = cartItems.find((x) => x.id === activitiesdata.id);
     if (exist) {
       setCartItems(

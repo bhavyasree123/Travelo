@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import activitiesdata from "./activitiesdata";
 export default function Activities() {
+
+
   return (
     <Section id="recommend">
       <div className="destinations">
