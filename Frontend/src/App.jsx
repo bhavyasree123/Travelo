@@ -23,7 +23,6 @@ import DairyExpo from "./components/activities/specificpage/DairyExpo";
 import PupperParty from "./components/activities/specificpage/PupperParty";
 import RoseExhibition from "./components/activities/specificpage/RoseExhibition";
 import WildLifeTour from "./components/activities/specificpage/WildLifeTour";
-import GalleryPupperParty from "./components/gallery/specificpage/GalleryPupperParty";
 import Cart from "./components/cart/Cart";
 
 
@@ -80,7 +79,7 @@ export default function App() {
         <Route path="/Events" component={Events}></Route>
         {/* Gallery Routing Start */}
         <Route path="/Galleries" component={Gallery}></Route>
-        <Route path="/Gallery/GalleryPupperParty" component={GalleryPupperParty}></Route>
+       {/* Gallery Routing End */}
         <Route path="/MapPage" component={MapPage}></Route>
         <Route path="/CartPage" component={CartPage}></Route>
         <Route path="/Cart" component={Cart}></Route>
