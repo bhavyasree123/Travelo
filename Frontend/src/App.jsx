@@ -80,6 +80,7 @@ export default function App() {
         {/* Activities Routing End */}
         {/* Events Routing Start */}
         <Route path="/Events" component={Events}></Route>
+        {/* Events Routing End */}
         {/* Gallery Routing Start */}
         <Route path="/Galleries" component={Gallery}></Route>
         <Route
