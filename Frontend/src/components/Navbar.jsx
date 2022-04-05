@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export default function Navbar() {
+export default function Navbar(props) {
+
   const [showHamburger, setShowHamburger] = useState(false);
   return (
     <Section id="navbar">
@@ -33,13 +34,16 @@ export default function Navbar() {
                 <a href="/Events">Events</a>
               </li>
               <li>
-                <a href="/Gallery">Gallery</a>
+                <a href="/Galleries">Gallery</a>
               </li>
               <li>
                 <a href="/Login">LogIn</a>
               </li>
               <li>
                 <a href="/MapPage">Map</a>
+              </li>
+              <li>
+                <a href="/CartPage"><i class ="fa fa-shopping-cart fa-2x"></i></a>
               </li>
             </ul>
           </div>

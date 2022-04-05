@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AdventuresData from "./AdventuresData";
+
 export default function Adventures() {
   return (
     <Section id="recommend">

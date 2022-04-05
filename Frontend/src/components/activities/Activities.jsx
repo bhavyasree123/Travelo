@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import activitiesdata from "./activitiesdata";
-export default function Events() {
+export default function Activities() {
   return (
     <Section id="recommend">
       <div className="destinations">
         {activitiesdata.map((destination) => {
           return (
-            <div className="destination">
+            <div className="destination" key={destination.id}>
               <img src={destination.image} alt="" />
               <h3>{destination.title}</h3>
               <p>{destination.subTitle}</p>
@@ -19,6 +19,9 @@ export default function Events() {
 
                 <a className="button" href={destination.href}>
                   Read More
+                </a>
+                <a className="button" href="/Cart">
+                  Add to Cart
                 </a>
               </div>
             </div>

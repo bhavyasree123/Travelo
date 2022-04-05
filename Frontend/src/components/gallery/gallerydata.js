@@ -6,6 +6,7 @@ const gallerydata =[
       subTitle: "Singapore, officialy thr Republic of Singapore, is a",
       cost: "38,800",
       duration: "Approx 2 night trip",
+      href: "/Gallery/PupperParty"
     },
     {
       image: "https://gossipkigalliyan.com/wp-content/uploads/2019/06/58049151_871409649864563_6469656868875665408_n.jpg",
@@ -14,6 +15,7 @@ const gallerydata =[
       subTitle: "Thailand is a Southeast Asia country. It's known for",
       cost: "54,200",
       duration: "Approx 2 night trip",
+      href: "/Gallery/PupperParty"
     },
     {
       image: "https://media.istockphoto.com/photos/cheering-crowd-of-unrecognized-people-at-a-rock-music-concert-concert-picture-id1189205501?k=20&m=1189205501&s=612x612&w=0&h=fexl_Cmu6AdLatIasGg_XYTkLSeWHCtvhMw1nK5_uDc=",
