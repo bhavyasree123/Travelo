@@ -1,112 +1,68 @@
-const router = require('express').Router();
-const { check, validationResult } = require('express-validator');
-const JWT = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
-const { users } = require('../db');
+const router = require("express").Router();
+const User = require("../models/User");
+const CryptoJS = require("crypto-js");
+const jwt = require("jsonwebtoken");
 
-// SIGNUP
-router.post(
-  '/signup',
-  [
-    check('email', 'Please input a valid email').isEmail(), // validation
-    check(
-      'password',
-      'Please input a password with a min length of 6'
-    ).isLength({ min: 6 }),
-  ],
-  async (req, res) => {
-    const { email, password } = req.body;
-
-    // Validate the inputs
-    const errors = validationResult(req);
-
-    if (!errors.isEmpty()) {
-      return res.status(422).json({
-        errors: errors.array(),
-      });
-    }
-
-    // Validate if the user doesnt already exist;
-    const user = users.find((user) => {
-      return user.email === email;
-    });
-
-    if (user) {
-      return res.status(422).json({
-        errors: [
-          {
-            msg: 'This user already exists',
-          },
-        ],
-      });
-    }
-
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Save the password into the db
-    users.push({
-      email,
-      password: hashedPassword,
-    });
-
-    const token = await JWT.sign({ email }, 'JwtSecreatKey', {
-      expiresIn: 360000,
-    });
-
-    res.json({
-      token,
-    });
-  }
-);
-
-// LOGIN
-router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
-
-  // Check if user with email already exists
-  const user = users.find((user) => {
-    return user.email === email;
+//REGISTER
+router.post("/register", async (req, res) => {
+  const newUser = new User({
+    username: req.body.username,
+    email: req.body.email,
+    password: CryptoJS.AES.encrypt(
+      req.body.password,
+      process.env.PASS_SEC
+    ).toString(),
   });
 
-  console.log(`user exixt${user}`);
-
-  if (!user) {
-    return res.status(422).json({
-      errors: [
-        {
-          msg: 'Invalid Credentials',
-        },
-      ],
-    });
+  try {
+    const savedUser = await newUser.save();
+    res.status(201).json(savedUser);
+  } catch (err) {
+    res.status(500).json(err);
   }
-
-  // Check if the password if valid
-  const isMatch = await bcrypt.compare(password, user.password);
-
-  if (!isMatch) {
-    return res.status(404).json({
-      errors: [
-        {
-          msg: 'Invalid Credentials',
-        },
-      ],
-    });
-  }
-
-  // Send JSON WEB TOKEN
-  const token = await JWT.sign({ email }, 'JwtSecreatKey', {
-    expiresIn: 360000,
-  });
-
-  res.json({
-    token,
-  });
 });
 
-// ALL USER
-router.get('/all', (req, res) => {
-  res.json(users);
+//LOGIN
+
+router.post('/login', async (req, res) => {
+    try{
+        const user = await User.findOne(
+            {
+                userName: req.body.user_name
+            }
+        );
+
+        !user && res.status(401).json("Wrong User Name");
+
+        const hashedPassword = CryptoJS.AES.decrypt(
+            user.password,
+            process.env.PASS_SEC
+        );
+
+
+        const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
+
+        const inputPassword = req.body.password;
+        
+        originalPassword != inputPassword && 
+            res.status(401).json("Wrong Password");
+
+        const accessToken = jwt.sign(
+        {
+            id: user._id,
+            isAdmin: user.isAdmin,
+        },
+        process.env.JWT_SEC,
+            {expiresIn:"3d"}
+        );
+  
+        const { password, ...others } = user._doc;  
+        res.status(200).json({...others, accessToken});
+
+    }catch(err){
+        res.status(500).json(err);
+    }
+
 });
 
 module.exports = router;
