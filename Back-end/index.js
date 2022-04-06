@@ -1,16 +1,27 @@
-const express = require("express")
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const mongoDb = require('./config/db');
 
 const app = express();
 
-app.use(express.json())
+dotenv.config();
+const { PORT } = process.env;
 
-app.use('/auth', require("./routes/auth"))
-app.use('/posts', require("./routes/posts"))
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+mongoDb();
 
-app.get('/' , (req, res) => {
-    res.send("server started");  
-  });
+app.use('/', require('./routes/events'));
+// app.use('/auth', require('./routes/auth'));
+// app.use('/posts', require('./routes/posts'));
 
-app.listen((4000), () => {
-    console.log("Listening on port 4000")
-})
+app.get('/', (req, res) => {
+  res.send('Hello from the other side of the world 🌏');
+});
+
+app.listen(PORT, () => {
+  console.log(` 🚀 Server is listening on port ${PORT}`);
+});
