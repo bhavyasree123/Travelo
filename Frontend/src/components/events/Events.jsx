@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import eventsdata from "./eventsdata";
-import ModalData from "./specificpage/ModalData";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import eventsdata from './eventsdata';
+import ModalData from './specificpage/ModalData';
 
 export default function Events() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [data, setData] = useState(eventsdata[0]);
 
   const buttonClick = (destination) => {
+    localStorage.setItem('venue', JSON.stringify(destination));
     setIsModalVisible(true);
     setData(destination);
   };

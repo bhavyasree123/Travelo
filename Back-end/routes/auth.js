@@ -1,17 +1,17 @@
-const router = require("express").Router();
-const { check, validationResult } = require("express-validator");
-const JWT = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
-const { users } = require("../db");
+const router = require('express').Router();
+const { check, validationResult } = require('express-validator');
+const JWT = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const { users } = require('../db');
 
 // SIGNUP
 router.post(
-  "/signup",
+  '/signup',
   [
-    check("email", "Please input a valid email").isEmail(),  // validation
+    check('email', 'Please input a valid email').isEmail(), // validation
     check(
-      "password",
-      "Please input a password with a min length of 6"
+      'password',
+      'Please input a password with a min length of 6'
     ).isLength({ min: 6 }),
   ],
   async (req, res) => {
@@ -27,7 +27,7 @@ router.post(
     }
 
     // Validate if the user doesnt already exist;
-    let user = users.find((user) => {
+    const user = users.find((user) => {
       return user.email === email;
     });
 
@@ -35,7 +35,7 @@ router.post(
       return res.status(422).json({
         errors: [
           {
-            msg: "This user already exists",
+            msg: 'This user already exists',
           },
         ],
       });
@@ -50,11 +50,9 @@ router.post(
       password: hashedPassword,
     });
 
-    const token = await JWT.sign(
-      { email },
-      "JwtSecreatKey",
-      { expiresIn: 360000 }
-    );
+    const token = await JWT.sign({ email }, 'JwtSecreatKey', {
+      expiresIn: 360000,
+    });
 
     res.json({
       token,
@@ -63,41 +61,41 @@ router.post(
 );
 
 // LOGIN
-router.post("/login", async (req, res) => {
+router.post('/login', async (req, res) => {
   const { email, password } = req.body;
-  
+
   // Check if user with email already exists
-  let user = users.find((user) => {
+  const user = users.find((user) => {
     return user.email === email;
   });
 
-  console.log("user exixt" + user)
+  console.log(`user exixt${user}`);
 
   if (!user) {
     return res.status(422).json({
       errors: [
         {
-          msg: "Invalid Credentials",
+          msg: 'Invalid Credentials',
         },
       ],
     });
   }
 
   // Check if the password if valid
-  let isMatch = await bcrypt.compare(password, user.password);
+  const isMatch = await bcrypt.compare(password, user.password);
 
   if (!isMatch) {
     return res.status(404).json({
       errors: [
         {
-          msg: "Invalid Credentials",
+          msg: 'Invalid Credentials',
         },
       ],
     });
   }
 
   // Send JSON WEB TOKEN
-  const token = await JWT.sign({ email }, "JwtSecreatKey", {
+  const token = await JWT.sign({ email }, 'JwtSecreatKey', {
     expiresIn: 360000,
   });
 
@@ -107,7 +105,7 @@ router.post("/login", async (req, res) => {
 });
 
 // ALL USER
-router.get("/all", (req, res) => {
+router.get('/all', (req, res) => {
   res.json(users);
 });
 
