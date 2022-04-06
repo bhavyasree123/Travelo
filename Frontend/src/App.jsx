@@ -82,10 +82,10 @@ export default function App() {
         {/* Events Routing End */}
         {/* Gallery Routing Start */}
         <Route path="/Galleries" component={Gallery}></Route>
-        <Route
+        {/* <Route
           path="/Gallery/GalleryPupperParty"
           component={GalleryPupperParty}
-        ></Route>
+        ></Route> */}
         <Route path="/MapPage" component={MapPage}></Route>
         <Route path="/CartPage" component={CartPage}></Route>
         <Route path="/Cart" component={Cart}></Route>

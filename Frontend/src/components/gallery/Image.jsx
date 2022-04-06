@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Image() {
+function Image(props) {
+  let {urls} = props;
   return (
     <Wrapper>
 <Container>
-<img src = "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=406&q=80"/>
+<img src = {urls?.regular} alt="image"/>
 </Container>
     </Wrapper>
   )

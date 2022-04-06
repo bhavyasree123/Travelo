@@ -2,11 +2,16 @@ import React from 'react'
 import styled from 'styled-components';
 import Image from './Image';
 
-function MainContiner() {
+function MainContiner(props) {
+   let {images} = props;
   return (
     <Wrapper>
         <Container>
-         <Image/>
+          {images.map((image)=>{
+            let {urls} = image;
+          return  <Image key={'id'} urls={urls}/>
+          })}
+        
         </Container>
     </Wrapper>
   )
